@@ -1,10 +1,22 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [video.js MPEG-DASH Source Handler](#videojs-mpeg-dash-source-handler)
+  - [Table of Contents](#table-of-contents)
+  - [Zero to Hero](#zero-to-hero)
+  - [Getting Started](#getting-started)
+  - [Protected Content](#protected-content)
+  - [Captions](#captions)
+    - [Using TTML Captions](#using-ttml-captions)
+  - [Multi-Language Labels](#multi-language-labels)
+  - [Passing options to Dash.js](#passing-options-to-dashjs)
+    - [Deprecation Warning](#deprecation-warning)
+  - [Initialization Hook](#initialization-hook)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # video.js MPEG-DASH Source Handler
-
-[![Build Status](https://travis-ci.org/videojs/videojs-contrib-dash.svg?branch=master)](https://travis-ci.org/videojs/videojs-contrib-dash)
-[![Greenkeeper badge](https://badges.greenkeeper.io/videojs/videojs-contrib-dash.svg)](https://greenkeeper.io/)
-[![Slack Status](http://slack.videojs.com/badge.svg)](http://slack.videojs.com)
-
-[![NPM](https://nodei.co/npm/videojs-contrib-dash.png?downloads=true&downloadRank=true)](https://nodei.co/npm/videojs-contrib-dash/)
 
 A video.js source handler for supporting MPEG-DASH playback through a video.js player on browsers with support for Media Source Extensions.
 
@@ -12,12 +24,9 @@ __Supported Dash.js version: 4.x__
 
 Maintenance Status: Stable
 
-Drop by our slack channel (#playback) on the [Video.js slack](http://slack.videojs.com).
+## Table of Contents
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
+- [Zero to Hero](#zero-to-hero)
 - [Getting Started](#getting-started)
 - [Protected Content](#protected-content)
 - [Captions](#captions)
@@ -27,7 +36,24 @@ Drop by our slack channel (#playback) on the [Video.js slack](http://slack.video
   - [Deprecation Warning](#deprecation-warning)
 - [Initialization Hook](#initialization-hook)
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+## Zero to Hero
+
+In order to make changes to this repository you need to be a member of the Softwire Employees team. Please add your GitHub username to Bamboo to do this.
+
+After cloning the repository run `npm install` in the project's root directory. I needed to use npm 18 for this to work.
+Build the app using `npm run build`.
+
+If video.js as a dependancy in one of your projects and you want to make experimental changes to video.js source code you can point your project to your local copy of this repository. Once you have made your changes to videojs-contrib-dash/src/ run `npm run build`. Navigate to the root directory of the project using video.js as a dependency and run `npm install <path-to-video.js-root-directory>#<branch-name>`.
+
+There can be problems in using your local copy as a dependancy. If you are having trouble you can create a new repo on your personal GitHub account and push your changes there. Make sure to build before you push.
+
+`git remote add upstream <your-git-repo>`
+
+`git push upstream <branch-name>`
+
+Alternatively you can fork this repo directly. You can then point your project to the new repo using `npm install <your-github-name>/<your-repo-name>#<branch-name>` from the project's root directory.
+
+To modify the code, create a branch off the latest version called `main-<new-version-number>`, and make the code changes. Then change the version number in `package.json`, build, and commit the change with a message along the lines of `Build version 5.1.2`
 
 ## Getting Started
 
