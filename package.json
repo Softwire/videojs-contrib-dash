@@ -41,9 +41,6 @@
     "videojs-plugin",
     "widevine"
   ],
-  "browserify-shim": {
-    "video.js": "global:videojs"
-  },
   "files": [
     "CONTRIBUTING.md",
     "dist/",
@@ -77,8 +74,7 @@
     "sinon": "^6.1.5",
     "videojs-generate-karma-config": "^5.0.1",
     "videojs-generate-rollup-config": "~2.3.0",
-    "videojs-generator-verify": "^3.0.1",
-    "videojs-standard": "~7.1.0"
+    "videojs-generator-verify": "^3.0.1"
   },
   "module": "dist/videojs-dash.es.js",
   "generator-videojs-plugin": {
