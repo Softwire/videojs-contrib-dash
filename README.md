@@ -43,17 +43,8 @@ In order to make changes to this repository you need to be a member of the Softw
 After cloning the repository run `npm install` in the project's root directory. I needed to use npm 18 for this to work.
 Build the app using `npm run build`.
 
-If video.js as a dependancy in one of your projects and you want to make experimental changes to video.js source code you can point your project to your local copy of this repository. Once you have made your changes to videojs-contrib-dash/src/ run `npm run build`. Navigate to the root directory of the project using video.js as a dependency and run `npm install <path-to-video.js-root-directory>#<branch-name>`.
-
-There can be problems in using your local copy as a dependancy. If you are having trouble you can create a new repo on your personal GitHub account and push your changes there. Make sure to build before you push.
-
-`git remote add upstream <your-git-repo>`
-
-`git push upstream <branch-name>`
-
-Alternatively you can fork this repo directly. You can then point your project to the new repo using `npm install <your-github-name>/<your-repo-name>#<branch-name>` from the project's root directory.
-
-To modify the code, create a branch off the latest version called `main-<new-version-number>`, and make the code changes. Then change the version number in `package.json`, build, and commit the change with a message along the lines of `Build version 5.1.2`
+To modify the code, create a branch off the latest version called `main-<new-version-number>`, and make the code changes. Then change the version number in `package.json`, build, and commit the change.
+Then upload the minified (`dist/videojs-dash.min.js`) code file to s3. Inform C5 that the cassie config will need changing to point at this new file.
 
 ## Getting Started
 
