@@ -1,5 +1,6 @@
 import dashjs from 'dashjs';
-import videojs from 'video.js';
+
+const videojs = C5PlayerCore.VideoJs
 
 /**
  * Setup audio tracks. Take the tracks from dash and add the tracks to videojs. Listen for when
