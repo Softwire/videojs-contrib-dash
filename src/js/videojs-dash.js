@@ -1,10 +1,11 @@
 import window from 'global/window';
-import videojs from 'video.js';
 import dashjs from 'dashjs';
 import setupAudioTracks from './setup-audio-tracks';
 import setupTextTracks from './setup-text-tracks';
 import document from 'global/document';
 import './ttml-text-track-display';
+
+const videojs = C5PlayerCore.VideoJs
 
 /**
  * videojs-contrib-dash

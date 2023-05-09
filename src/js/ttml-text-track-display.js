@@ -1,7 +1,7 @@
-import videojs from 'video.js';
 import dashjs from 'dashjs';
 import window from 'global/window';
 
+const videojs = C5PlayerCore.VideoJs
 const Component = videojs.getComponent('Component');
 
 const darkGray = '#222';

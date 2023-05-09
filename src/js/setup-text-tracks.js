@@ -1,6 +1,7 @@
 import dashjs from 'dashjs';
-import videojs from 'video.js';
 import window from 'global/window';
+
+const videojs = C5PlayerCore.VideoJs
 
 function find(l, f) {
   for (let i = 0; i < l.length; i++) {
