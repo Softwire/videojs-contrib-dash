@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/videojs/videojs-contrib-dash.git"
   },
-  "version": "5.1.1",
+  "version": "5.1.2",
   "author": "Brightcove, Inc",
   "license": "Apache-2.0",
   "scripts": {
@@ -42,6 +42,7 @@
     "widevine"
   ],
   "browserify-shim": {
+    "dashjs": "global:dashjs",
     "video.js": "global:videojs"
   },
   "files": [
@@ -72,7 +73,6 @@
     "npm-merge-driver-install": "^2.0.1",
     "npm-run-all": "^4.1.5",
     "rollup": "^0.66.0",
-    "rollup-plugin-node-globals": "^1.4.0",
     "shx": "^0.3.2",
     "sinon": "^6.1.5",
     "videojs-generate-karma-config": "^5.0.1",
