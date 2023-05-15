@@ -43,8 +43,9 @@ In order to make changes to this repository you need to be a member of the Softw
 After cloning the repository run `npm install` in the project's root directory. I needed to use npm 18 for this to work.
 Build the app using `npm run build`.
 
-To modify the code, create a branch off the latest version called `main-<new-version-number>`, and make the code changes. Then change the version number in `package.json`, build, and commit the change.
-Then upload the minified (`dist/videojs-dash.min.js`) code file to s3. Inform C5 that the cassie config will need changing to point at this new file.
+To modify the code, create a branch off `main`, make the code changes and a GitHub pull request.
+
+To release, tag the commit with the version number (we currently are using the Dash.JS version), then build the app, and upload the minified (`dist/videojs-dash.min.js`) code file to s3. Inform C5 that the cassie config will need changing to point at this new file.
 
 ## Getting Started
 
