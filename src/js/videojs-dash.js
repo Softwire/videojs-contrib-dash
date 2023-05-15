@@ -246,6 +246,19 @@ class Html5DashJS {
       this.mediaPlayer_.attachTTMLRenderingDiv(this.ttmlContainer_.el());
     }
 
+    if (!tech.featuresNativeTextTracks) {
+      this.mediaPlayer_.updateSettings({
+        streaming: {
+          text: {
+            webvtt: {
+              customRenderingEnabled: true
+            }
+          }
+        }
+      })
+      this.mediaPlayer_.attachVttRenderingDiv(document.querySelector(".vjs-text-track-display"));
+    }
+
     // Dash.js autoplays by default, video.js will handle autoplay
     this.mediaPlayer_.setAutoPlay(false);
 
@@ -432,11 +445,6 @@ videojs.DashSourceHandler.canPlayType = function(type) {
 
   return '';
 };
-
-// Only add the SourceHandler if the browser supports MediaSourceExtensions
-if (window.MediaSource) {
-  videojs.getTech('Html5').registerSourceHandler(videojs.DashSourceHandler(), 0);
-}
 
 videojs.Html5DashJS = Html5DashJS;
 export default Html5DashJS;
