@@ -241,10 +241,8 @@ class Html5DashJS {
 
     this.mediaPlayer_.attachView(this.el_);
 
-    if (options.dash && options.dash.useTTML) {
-      this.ttmlContainer_ = this.player.addChild('TTMLTextTrackDisplay');
-      this.mediaPlayer_.attachTTMLRenderingDiv(this.ttmlContainer_.el());
-    }
+    this.ttmlContainer_ = this.player.addChild('TTMLTextTrackDisplay');
+    this.mediaPlayer_.attachTTMLRenderingDiv(this.ttmlContainer_.el());
 
     // Dash.js autoplays by default, video.js will handle autoplay
     this.mediaPlayer_.setAutoPlay(false);
