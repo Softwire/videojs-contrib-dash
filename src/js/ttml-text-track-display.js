@@ -122,20 +122,12 @@ class TTMLTextTrackDisplay extends Component {
    *         The element that was created.
    */
   createEl() {
-    const newEl = super.createEl('div', {
-      className: 'vjs-text-track-display-ttml'
+    return super.createEl('div', {
+      className: 'vjs-text-track-display'
     }, {
       'aria-live': 'off',
       'aria-atomic': 'true'
     });
-
-    newEl.style.position = 'absolute';
-    newEl.style.left = '0';
-    newEl.style.right = '0';
-    newEl.style.top = '0';
-    newEl.style.bottom = '0';
-    newEl.style.margin = '1.5%';
-    return newEl;
   }
 
   updateStyle({captionDiv}) {
