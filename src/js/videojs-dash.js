@@ -241,10 +241,8 @@ class Html5DashJS {
 
     this.mediaPlayer_.attachView(this.el_);
 
-    if (options.dash && options.dash.useTTML) {
-      this.ttmlContainer_ = this.player.addChild('TTMLTextTrackDisplay');
-      this.mediaPlayer_.attachTTMLRenderingDiv(this.ttmlContainer_.el());
-    }
+    this.ttmlContainer_ = this.player.addChild('TTMLTextTrackDisplay');
+    this.mediaPlayer_.attachTTMLRenderingDiv(this.ttmlContainer_.el());
 
     if (!tech.featuresNativeTextTracks) {
       this.mediaPlayer_.updateSettings({
