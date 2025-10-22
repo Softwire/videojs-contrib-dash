@@ -257,6 +257,19 @@ class Html5DashJS {
       this.mediaPlayer_.attachVttRenderingDiv(document.querySelector(".vjs-text-track-display"));
     }
 
+    this.mediaPlayer_.updateSettings({
+      streaming: {
+        abr: {
+          minBitrate: {
+            video: 6000
+          },
+          initialBitrate: {
+            video: 6000
+          }
+        },
+      }
+    })
+
     // Dash.js autoplays by default, video.js will handle autoplay
     this.mediaPlayer_.setAutoPlay(false);
 
